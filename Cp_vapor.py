@@ -30,8 +30,8 @@ def Cp_v_Iso(T):
     Cp_v_Iso = -6.900678097360619e-05*T**2 + 0.250658478269019*T + 21.727358906262694
     return Cp_v_Iso
 def Cp_mix_y(Me_frac,T):
-    Cp_mix = Me_frac*Cp_v_Me(T) + (1-Me_frac)*Cp_v_Iso(T)
-    return Cp_mix
+    Cp_mix_y = Me_frac*Cp_v_Me(T) + (1-Me_frac)*Cp_v_Iso(T)
+    return Cp_mix_y
 ###/\/\/\/\PUT THIS IS MODEL CODE/\/\/\/\###
 
 
