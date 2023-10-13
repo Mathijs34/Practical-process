@@ -14,7 +14,7 @@ g = 9.81
 
 """Import H_r in code"""
 
-def H_r(V):
+def Overflow(V):
     A_tube = 0.25 * 8.103 * 1e-3 * np.pi #3/8" x 22 SWG
     g = 9.81
     V_max = 0.00484*np.pi #m^3
@@ -48,7 +48,7 @@ def H_r(V):
 
 
 
-def overflow(x):
+def overflow1(x):
     if x<110:
         return 0
     else: 
@@ -58,7 +58,7 @@ V_max2 = 0.00484*np.pi
 
 
 x2 = np.linspace(0,1.2*V_max2)
-y2 = [H_r(x2) for x2 in x2]
+y2 = [Overflow(x2) for x2 in x2]
 plt.plot(x2,y2, c="r")
 plt.xlabel("Volume [m^3]")
 plt.ylabel("Overflowrate [m^3/s]")
@@ -67,7 +67,7 @@ plt.show()
 
 
 x = np.linspace(0,220)
-y = [overflow(x) for x in x]
+y = [overflow1(x) for x in x]
 plt.plot(x,y)
 plt.show()
                 
