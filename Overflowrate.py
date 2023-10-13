@@ -12,7 +12,7 @@ Vm_iso = M_Iso/1000/dens_Iso
 A_tube = 0.25 * 8.103 *1e-3 * np.pi
 g = 9.81
 
-"""Import H_r in code"""
+"""Import def Overflow in code"""
 
 def Overflow(V):
     A_tube = 0.25 * 8.103 * 1e-3 * np.pi #3/8" x 22 SWG
